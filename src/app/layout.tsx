@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,18 +20,18 @@ export default function RootLayout({
       <body className="flex min-h-screen bg-indigo-400 text-zinc-50">
         <aside className="w-64 bg-zinc-50 p-6 ">
           <nav className="flex flex-col space-y-4 mt-12">
-            <a
+            <Link
               className="flex justify-center text-zinc-700  p-3 hover:bg-indigo-400/60 rounded-md font-semibold"
-              href=""
+              href="/"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex justify-center text-zinc-700  p-3 hover:bg-indigo-400/60  rounded-md font-semibold"
-              href=""
+              href="/pools"
             >
               My Pools
-            </a>
+            </Link>
           </nav>
         </aside>
         {children}
