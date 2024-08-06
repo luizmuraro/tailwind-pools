@@ -16,9 +16,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <aside>
-          <p>Teste aside</p>
+      <body className="flex min-h-screen bg-indigo-400 text-zinc-50">
+        <aside className="w-64 bg-zinc-50 p-6 ">
+          <nav className="flex flex-col space-y-4 mt-12">
+            <a
+              className="flex justify-center text-zinc-700  p-3 hover:bg-indigo-400/60 rounded-md font-semibold"
+              href=""
+            >
+              Home
+            </a>
+            <a
+              className="flex justify-center text-zinc-700  p-3 hover:bg-indigo-400/60  rounded-md font-semibold"
+              href=""
+            >
+              My Pools
+            </a>
+          </nav>
         </aside>
         {children}
       </body>
