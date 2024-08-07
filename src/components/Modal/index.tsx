@@ -1,12 +1,8 @@
+import { ModalContent } from "@/types/modal";
 import React from "react";
 
 export interface ModalProps {
-  modal: {
-    poolID: string;
-    name: string;
-    description: string;
-    external_url: string;
-  };
+  modal: ModalContent;
   show: boolean;
   handleClose: () => void;
 }

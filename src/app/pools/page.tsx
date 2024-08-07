@@ -3,14 +3,14 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Modal, { ModalProps } from "@/components/Modal";
+import { ModalContent } from "@/types/modal";
 
-const MOCK_POOLS = [
+const MOCK_POOLS: ModalContent[] = [
   {
     poolID: "0x61FD2dedA9c8a1ddb9F3F436D548C58643936f01",
     name: "Teste nome 1",
     description: "Teste description 1",
     external_url: "Teste external_url 1",
-    poolHistory: [{ date: "" }],
   },
   {
     poolID: "0x61FD2dedA9c8a1ddb9F3F436D548C58643936f02",
@@ -18,20 +18,18 @@ const MOCK_POOLS = [
     name: "Teste nome 2",
     description: "Teste description 2",
     external_url: "Teste external_url 2",
-    poolHistory: [{ date: "" }],
   },
   {
     poolID: "0x61FD2dedA9c8a1ddb9F3F436D548C58643936f03",
     name: "Teste nome 3",
     description: "Teste description 3",
     external_url: "Teste external_url 3",
-    poolHistory: [{ date: "" }],
   },
 ];
 
 export default function Pools() {
   const router = useRouter();
-  const [modal, setModal] = useState<ModalProps>();
+  const [modal, setModal] = useState<ModalContent>();
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
